@@ -10,12 +10,18 @@ import lombok.AllArgsConstructor;
  * @author Dalbir Kang
  */
 @AllArgsConstructor
-@Entity(name ="item_return")
+@Entity(name ="Items_Returned")
 public class Item_Return {
 
     @Id
-    @Column(name = "receiptNum")
-    private String receiptNum;
+    @Column(name = "ReceiptNum", nullable = false, columnDefinition = "INTEGER")
+    private int ReceiptNum;
+    @Column(name = "Items", nullable = false, columnDefinition = "INTEGER")
+    private int Items;
+    @Column(name = "Quantity", nullable = false, columnDefinition = "INTEGER")
+    private int Quantity;
+    @Column(name = "DateAndTime", nullable = false, columnDefinition = "TEXT")
+    private String DateAndTime;
 
     public Item_Return() {
 

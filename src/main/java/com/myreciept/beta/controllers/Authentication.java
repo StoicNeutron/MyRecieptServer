@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Samnang Thorn
  */
 @RestController
-public class RecieptAPI {
+public class Authentication {
 
-    // Endpoints API are here
+    // Authentication Endpoints are here
 }
