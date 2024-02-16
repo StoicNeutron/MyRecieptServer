@@ -8,11 +8,19 @@ import jakarta.persistence.Id;
  * @author Samnang Thorn
  * @author Dalbir Kang
  */
-@Entity(name ="users")
+@Entity(name ="Users")
 public class Users {
 
     @Id
-    @Column(name = "email")
-    private String email;
+    @Column(name = "Email", nullable = false, columnDefinition = "TEXT")
+    private String Email;
+    @Column(name = "Passkey", nullable = false, columnDefinition = "TEXT")
+    private String Passkey;
+    @Column(name = "DOB", nullable = false, columnDefinition = "TEXT")
+    private String DOB;
+    @Column(name = "MyReceiptEmail" , nullable = false, columnDefinition = "TEXT")
+    private String ReceiptEmail;
+    @Column(name = "Username" , nullable = false, columnDefinition = "TEXT")
+    private String Username;
 
 }
