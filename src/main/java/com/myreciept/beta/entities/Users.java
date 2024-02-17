@@ -12,15 +12,15 @@ import jakarta.persistence.Id;
 public class Users {
 
     @Id
-    @Column(name = "Email", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "email", nullable = false, columnDefinition = "TEXT")
     private String Email;
-    @Column(name = "Passkey", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "passkey", nullable = false, columnDefinition = "TEXT")
     private String Passkey;
-    @Column(name = "DOB", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "dob", nullable = false, columnDefinition = "TEXT")
     private String DOB;
-    @Column(name = "MyReceiptEmail" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "myreceiptemail" , nullable = false, columnDefinition = "TEXT")
     private String ReceiptEmail;
-    @Column(name = "Username" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "username" , nullable = false, columnDefinition = "TEXT")
     private String Username;
 
 }

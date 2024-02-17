@@ -14,13 +14,13 @@ import lombok.AllArgsConstructor;
 public class Items_Returned {
 
     @Id
-    @Column(name = "ReceiptNum", nullable = false, columnDefinition = "INTEGER")
+    @Column(name = "receiptnum", nullable = false, columnDefinition = "INTEGER")
     private int ReceiptNum;
-    @Column(name = "Items", nullable = false, columnDefinition = "INTEGER")
+    @Column(name = "items", nullable = false, columnDefinition = "INTEGER")
     private int Items;
-    @Column(name = "Quantity", nullable = false, columnDefinition = "INTEGER")
+    @Column(name = "quantity", nullable = false, columnDefinition = "INTEGER")
     private int Quantity;
-    @Column(name = "DateAndTime", nullable = false, columnDefinition = "TEXT"))
+    @Column(name = "dateandtime", nullable = false, columnDefinition = "TEXT"))
     private String DateAndTime;
     public Item_Return() {
 

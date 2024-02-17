@@ -12,16 +12,16 @@ import jakarta.persistence.Id;
 public class Receipts {
 
     @Id
-    @Column(name = "ReceiptNum", nullable = false, columnDefinition = "INTEGER"))
+    @Column(name = "receiptno", nullable = false, columnDefinition = "INTEGER"))
     private int ReceiptNo;
-    @Column(name = "TotalAmount", nullable = false, columnDefinition = "INTEGER")
+    @Column(name = "totalamount", nullable = false, columnDefinition = "INTEGER")
     private int TotalAmount;
-    @Column(name = "DateAndTime", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "dandt", nullable = false, columnDefinition = "TEXT")
     private String DAndT;
-    @Column(name = "Category" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "category" , nullable = false, columnDefinition = "TEXT")
     private String Category;
-    @Column(name = "CompanyName" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "companyname" , nullable = false, columnDefinition = "TEXT")
     private String CompanyName;
-    @Column(name = "U_Email" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "u_email" , nullable = false, columnDefinition = "TEXT")
     private String U_Email;
 }
