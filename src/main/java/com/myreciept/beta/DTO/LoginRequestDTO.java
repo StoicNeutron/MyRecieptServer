@@ -1,9 +1,6 @@
 package com.myreciept.beta.DTO;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author Samnang Thorn
@@ -14,7 +11,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class LoginRequestDTO{
 
+    @NonNull
     private String email;
+    @NonNull
     private String passWord;
 
 }
