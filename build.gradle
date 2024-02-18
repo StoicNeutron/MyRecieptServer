@@ -28,6 +28,16 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'com.oracle.database.jdbc:ojdbc8:19.3.0.0'
+}
+
+jar{
+	manifest {
+		attributes 'Main-Class': 'com.myreciept.beta.BetaApplication'
+	}
+		from {
+			configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+		}
 }
 
 tasks.named('test') {

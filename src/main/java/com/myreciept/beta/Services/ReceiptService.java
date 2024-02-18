@@ -40,4 +40,8 @@ public class ReceiptService {
         return receiptRepository.findAllByCategory(myReceiptEmail, category);
     }
 
+    public List<Receipts> findAll(){
+        return receiptRepository.findAll();
+    }
+
 }
