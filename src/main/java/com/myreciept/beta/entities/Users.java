@@ -20,15 +20,15 @@ import lombok.Setter;
 public class Users {
 
     @Id
-    @Column(name = "Email", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Email", nullable = false)
     private String email;
-    @Column(name = "Password", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Password", nullable = false)
     private String Password;
-    @Column(name = "Salt", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Salt", nullable = false)
     private String Salt;
-    @Column(name = "MyReceiptEmail" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "MyReceiptEmail" , nullable = false)
     private String ReceiptEmail;
-    @Column(name = "Username" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Username" , nullable = false)
     private String Username;
 
 }

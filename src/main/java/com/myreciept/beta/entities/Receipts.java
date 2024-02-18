@@ -19,17 +19,17 @@ public class Receipts {
     @Id
     @SequenceGenerator(name = "User_sequence", sequenceName = "User_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "User_sequence")
-    @Column(name = "ReceiptNum", nullable = false, columnDefinition = "INTEGER")
+    @Column(name = "ReceiptNum", nullable = false)
     private Integer ReceiptNo;
-    @Column(name = "TotalAmount", nullable = false, columnDefinition = "FLOAT")
-    private double totalAmount;
-    @Column(name = "DateAndTime", nullable = false, columnDefinition = "TEXT")
+    @Column(name = "TotalAmount", nullable = false)
+    private Double totalAmount;
+    @Column(name = "DateAndTime", nullable = false)
     private String dateNTime;
-    @Column(name = "Category" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Category" , nullable = false)
     private String category;
-    @Column(name = "CompanyName" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "CompanyName" , nullable = false)
     private String companyName;
-    @Column(name = "Email" , nullable = false, columnDefinition = "TEXT")
+    @Column(name = "Email" , nullable = false)
     private String myReceiptEmail;
 
     public Receipts(double totalAmount, String dateNTime, String category, String companyName, String myReceiptEmail){
