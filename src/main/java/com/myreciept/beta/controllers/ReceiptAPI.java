@@ -6,10 +6,8 @@ import com.myreciept.beta.entities.Receipts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 /**
@@ -41,6 +39,24 @@ public class ReceiptAPI {
     @GetMapping(value = "/v1/receipts/category", consumes = "application/json")
     public ResponseEntity<List<Receipts>> getReceiptsByCategory(@RequestBody ReceiptDTO receiptDTO){
         List<Receipts> receiptList = this.receiptService.findAllReceiptByCategory(receiptDTO.getMyReceiptEmail(), receiptDTO.getCategory());
+        return new ResponseEntity<>(receiptList, HttpStatus.CREATED);
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/v1/total")
+    public ResponseEntity<Double> getTotal(){
+        List<Receipts> receiptList = this.receiptService.findAll();
+        double total = 0;
+        for(Receipts receipts: receiptList){
+            total += (double) receipts.getTotalAmount();
+        }
+        return new ResponseEntity<>(total, HttpStatus.CREATED);
+    }
+
+    @CrossOrigin
+    @GetMapping(value = "/v1/receipts/sample")
+    public ResponseEntity<List<Receipts>> getReceiptsByCategory(){
+        List<Receipts> receiptList = this.receiptService.findAll();
         return new ResponseEntity<>(receiptList, HttpStatus.CREATED);
     }
 }

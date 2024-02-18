@@ -18,4 +18,6 @@ public interface ReceiptRepository extends JpaRepository<Receipts, Integer> {
     @Query("SELECT r FROM Receipts r WHERE r.myReceiptEmail = :myReceiptEmail AND r.category = :category")
     List<Receipts> findAllByCategory(String myReceiptEmail, String category);
 
+    List<Receipts> findAllBy();
+
 }
