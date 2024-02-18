@@ -33,6 +33,11 @@ public class ReceiptService {
 
 
     public List<Receipts> findAllReceipt(@NonNull String myReceiptEmail){
-        return receiptRepository.findByMyReceiptEmail(myReceiptEmail);
+        return receiptRepository.findAllBy(myReceiptEmail);
     }
+
+    public List<Receipts> findAllReceiptByCategory(@NonNull String myReceiptEmail, String category){
+        return receiptRepository.findAllByCategory(myReceiptEmail, category);
+    }
+
 }

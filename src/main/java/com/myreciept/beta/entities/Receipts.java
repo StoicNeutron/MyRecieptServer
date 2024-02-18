@@ -12,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@NoArgsConstructor
 @Entity(name ="Receipts")
 public class Receipts {
 
